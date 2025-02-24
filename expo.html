@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+     <!-- Fontawesome CDN Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+         
+     <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">HOME</a>
+            <a href="">MY BOOKINGS</a>
+            <a href="">PROFILE</a>
+        </nav>
+    </header>
+    
+
+    
+    <!-- carousel -->
+    <div class="carousal">
+        <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="05_Manga_Books_Chennai_Book_Fair_2024_.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">1</div>
+                        <div class="topic1">BOOK FAIR</div>
+                        <div class="des">
+                            The scent of fresh pages fills the air as book lovers wander through endless rows of stories. Conversations buzz with excitement, authors share their insights, and every corner holds a new literary treasure. It's a paradise where imagination knows no bounds.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="exp1()">BOOK</button>
+
+                                <script>
+                                function exp1() {
+                                    window.location.href = "exp_1.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="busexpoland.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">2</div>
+                        <div class="topic2">BUSINESS EXPO</div>
+                        <div class="des">
+                            The hall hums with energy as entrepreneurs and innovators showcase their latest ideas. Deals are made, connections spark, and cutting-edge technologies take center stage. It’s a hub of opportunity where businesses shape the future.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="exp2()">BOOK</button>
+
+                                <script>
+                                function exp2() {
+                                    window.location.href = "exp_2.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="TRADLAND.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">3</div>
+                        <div class="topic3">TRADE EXPO</div>
+                        <div class="des">
+                            The air buzzes with market insights as traders and investors navigate booths filled with cutting-edge tools and strategies. Experts share predictions, algorithms crunch numbers, and deals unfold in real time. It’s the pulse of the financial world, alive with opportunity.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="exp3()">BOOK</button>
+
+                                <script>
+                                function exp3() {
+                                    window.location.href = "exp_3.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="ARTLAND.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">4</div>
+                        <div class="topic4">ART EXPO</div>
+                        <div class="des">
+                            The gallery hums with creativity as vibrant canvases, intricate sculptures, and mesmerizing installations captivate onlookers. Artists and collectors engage in deep conversations, each piece telling a story beyond words. It’s a celebration of imagination, where every stroke and color sparks inspiration.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="exp4()">BOOK</button>
+
+                                <script>
+                                function exp4() {
+                                    window.location.href = "exp_3.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- list thumnail -->
+            <div class="thumbnail">
+                <div class="item">
+                    <img src="book.webp">
+                    <div class="content">
+                        <div class="title">
+                            OK
+                        </div>
+                        <div class="description">
+                            opm
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="busexpo.png">
+                    <div class="content">
+                        <div class="title">
+                            RYOIKI TENKAI
+                        </div>
+                        <div class="description">
+                            I like slaves
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="TRADE.jpg">
+                    <div class="content">
+                        <div class="title">
+                            SKIBIDI
+                        </div>
+                        <div class="description">
+                            Gawk Gawk
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="ART.webp">
+                    <div class="content">
+                        <div class="title">
+                            AMATERASU
+                        </div>
+                        <div class="description">
+                            Your weakness is my existence
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- next prev -->
+    
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- time running -->
+            <div class="time"></div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="info.js"></script>
+</body>
+</html>

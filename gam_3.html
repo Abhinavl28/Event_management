@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIRLS LIKE TO DINE - Women’s Exclusive Food & Social Meetup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .left-section {
+            flex: 2;
+        }
+        .right-section {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        .event-info {
+            font-size: 16px;
+            color: #666;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+        .tickets-btn {
+            display: block;
+            width: 100%;
+            background: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tickets-btn:hover {
+            background: #d45592;
+        }
+        .confirmation-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: none;
+            width: 300px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .confirmation-box h2 {
+            margin: 0 0 15px;
+            color: #ff4500;
+        }
+        .close-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .close-btn:hover {
+            background: #555;
+        }
+        /* Background Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .map-link:hover {
+            text-decoration: underline;
+        }
+        /* Discussion Section Styles */
+        .discussion-section {
+            margin-top: 20px;
+        }
+        .discussion-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .discussion-list {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .discussion-item {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .discussion-item:last-child {
+            border-bottom: none;
+        }
+        .discussion-name {
+            font-weight: bold;
+            color: #ff69b4;
+        }
+    </style>
+    <script>
+        function showConfirmation() {
+            document.getElementById("ticketConfirmation").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function hideConfirmation() {
+            document.getElementById("ticketConfirmation").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function addDiscussion() {
+            var name = document.getElementById("discussionName").value.trim();
+            var comment = document.getElementById("discussionText").value.trim();
+            if (name === "" || comment === "") {
+                alert("Please enter both name and comment!");
+                return;
+            }
+            var discussionList = document.getElementById("discussionList");
+            var newComment = document.createElement("div");
+            newComment.classList.add("discussion-item");
+            newComment.innerHTML = `<p class="discussion-name">${name}:</p><p>${comment}</p>`;
+            discussionList.insertBefore(newComment, discussionList.firstChild);
+            document.getElementById("discussionText").value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>🍽️ GIRLS LIKE TO DINE - Women’s Exclusive Food & Social Meetup</h1>
+            <p class="event-info">An **exclusive social gathering** for women to dine, connect, and enjoy a fantastic evening of food and friendship! 🍷✨</p>
+
+            <div class="details">
+                <h2>📅 Date & Time</h2>
+                <p><strong>Sunday, 25 May 2025</strong> | <strong>07:00 PM - 11:00 PM IST</strong></p>
+                
+                <h2>📍 Location</h2>
+                <p><strong>The Leela Palace, Chennai, Tamil Nadu</strong></p>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Leela+Palace,+Chennai,+Tamil+Nadu" target="_blank">
+                    📍 View on Google Maps
+                </a>
+            </div>
+
+            <h2>✨ About This Event</h2>
+            <p>**Ladies, this one’s for you!** Join us for a fabulous evening at **The Leela Palace, Chennai**, featuring: </p>
+            <ul>
+                <li>🍷 **Exquisite Dining Experience** - A specially curated **multi-cuisine buffet**</li>
+                <li>🎤 **Live Music & Entertainment** - Relax with **soothing tunes & performances**</li>
+                <li>💬 **Networking & Socializing** - Connect with **like-minded women from diverse fields**</li>
+                <li>🎁 **Exciting Giveaways & Surprises** - Get exclusive **gifts & discounts**</li>
+            </ul>
+            <p>Come with your **friends** or **make new ones** in this **safe & fun** environment! 🎀🍽️</p>
+        </div>
+        
+        <div class="right-section">
+            <h2>🎟 Entry Pass</h2>
+            <p>Starting from <strong>₹999</strong></p>
+            <button class="tickets-btn" onclick="showConfirmation()">Get Tickets Now</button>
+
+            <!-- Discussion Section -->
+            <div class="discussion-section">
+                <h2>💬 Discussion</h2>
+                <input type="text" id="discussionName" class="discussion-box" placeholder="Enter your name">
+                <textarea id="discussionText" class="discussion-box" rows="3" placeholder="Share your thoughts..."></textarea>
+                <button class="tickets-btn" onclick="addDiscussion()">Post</button>
+                <div id="discussionList" class="discussion-list"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Background Overlay -->
+    <div id="overlay" class="overlay" onclick="hideConfirmation()"></div>
+
+    <!-- Ticket Confirmation Box -->
+    <div id="ticketConfirmation" class="confirmation-box">
+        <h2>✅ Tickets Booked!</h2>
+        <p>Your tickets have been successfully booked. Enjoy the screening! 🎬✨</p>
+        <button class="close-btn" onclick="hideConfirmation()">Close</button>
+    </div>
+</body>
+</html>
