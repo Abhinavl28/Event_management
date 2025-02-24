@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+     <!-- Fontawesome CDN Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+         
+     <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">HOME</a>
+            <a href="">MY BOOKINGS</a>
+            <a href="">PROFILE</a>
+        </nav>
+    </header>
+    
+
+    
+    <!-- carousel -->
+    <div class="carousal">
+        <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="coldland.webp">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">1</div>
+                        <div class="topic1">COLDPLAY</div>
+                        <div class="des">
+                            The stadium erupts as Coldplay takes the stage, neon wristbands pulsing with the beat. Chris Martin’s voice soars through the night, confetti raining like shooting stars. The crowd sings in unison, lost in the magic of the music.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="mus1()">BOOK</button>
+
+                                <script>
+                                function mus1() {
+                                    window.location.href = "mus_1.html";
+                                }
+                                </script>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="alanboy.webp">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">2</div>
+                        <div class="topic2">ALAN WALKER</div>
+                        <div class="des">
+                            The bass drops as Alan Walker takes control, lights flashing in sync with the electrifying beats. The crowd moves as one, lost in the waves of synth and soaring melodies. Fog and lasers fill the air, turning the night into a dreamlike escape.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="mus2()">BOOK</button>
+
+                                <script>
+                                function mus2() {
+                                    window.location.href = "mus_2.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="hiphopland.jpeg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">3</div>
+                        <div class="topic3">H-H TAMIZHA</div>
+                        <div class="des">
+                            The stage erupts with energy as Hip Hop Tamizha drops the beat, blending Tamil roots with electrifying rap. The crowd chants every lyric, hands in the air, vibing to the unstoppable rhythm. Lights, bass, and pure adrenaline turn the night into a musical revolution.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="mus3()">BOOK</button>
+
+                                <script>
+                                function mus3() {
+                                    window.location.href = "mus_3.html";
+                                }
+                                </script>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="vijayland.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">4</div>
+                        <div class="topic4">VIJAY ANTONY</div>
+                        <div class="des">
+                            The atmosphere pulses with emotion as Vijay Antony's deep, soulful melodies fill the air. The crowd sways, lost in the powerful blend of haunting tunes and high-energy beats. Each song feels like a journey, wrapping the night in nostalgia and raw intensity.
+                        </div>
+                        <button class="carousel-list-item-buttons" onclick="mus4()">BOOK</button>
+
+                                <script>
+                                function mus4() {
+                                    window.location.href = "mus_4.html";
+                                }
+                                </script>
+                          </div>      
+                
+                    </div>
+                </div>
+            </div>
+            <!-- list thumnail -->
+            <div class="thumbnail">
+                <div class="item">
+                    <img src="Coldplay2020242001.webp">
+                    <div class="content">
+                        <div class="title">
+                            OK
+                        </div>
+                        <div class="description">
+                            opm
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="walker.jpg">
+                    <div class="content">
+                        <div class="title">
+                            RYOIKI TENKAI
+                        </div>
+                        <div class="description">
+                            I like slaves
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="hiphop.jpg">
+                    <div class="content">
+                        <div class="title">
+                            SKIBIDI
+                        </div>
+                        <div class="description">
+                            Gawk Gawk
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="vijay.jpg">
+                    <div class="content">
+                        <div class="title">
+                            AMATERASU
+                        </div>
+                        <div class="description">
+                            Your weakness is my existence
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- next prev -->
+    
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- time running -->
+            <div class="time"></div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="info.js"></script>
+</body>
+</html>

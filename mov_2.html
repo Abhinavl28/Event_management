@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dark Knight Movie Screening 2025</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .left-section {
+            flex: 2;
+        }
+        .right-section {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        .tickets-btn {
+            display: block;
+            width: 100%;
+            background: #ff4500;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .tickets-btn:hover {
+            background: #e63e00;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .map-link:hover {
+            text-decoration: underline;
+        }
+        /* Ticket Confirmation Box */
+        .confirmation-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: none;
+            width: 300px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .confirmation-box h2 {
+            margin: 0 0 15px;
+            color: #ff4500;
+        }
+        .close-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .close-btn:hover {
+            background: #555;
+        }
+        /* Background Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        /* Discussion Section */
+        .discussion-section {
+            margin-top: 20px;
+        }
+        .discussion-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .discussion-list {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .discussion-item {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .discussion-item:last-child {
+            border-bottom: none;
+        }
+        .discussion-name {
+            font-weight: bold;
+            color: #ff4500;
+        }
+    </style>
+    <script>
+        function showConfirmation() {
+            document.getElementById("ticketConfirmation").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function hideConfirmation() {
+            document.getElementById("ticketConfirmation").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function addDiscussion() {
+            var name = document.getElementById("discussionName").value.trim();
+            var comment = document.getElementById("discussionText").value.trim();
+            if (name === "" || comment === "") {
+                alert("Please enter both name and comment!");
+                return;
+            }
+            var discussionList = document.getElementById("discussionList");
+            var newComment = document.createElement("div");
+            newComment.classList.add("discussion-item");
+            newComment.innerHTML = `<p class="discussion-name">${name}:</p><p>${comment}</p>`;
+            discussionList.insertBefore(newComment, discussionList.firstChild);
+            document.getElementById("discussionText").value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>🦇 The Dark Knight Movie Screening 2025 🦇</h1>
+            <p>Witness Christopher Nolan's legendary masterpiece on the big screen once again!</p>
+
+            <h2>📅 Date & Time</h2>
+            <p><strong>Saturday, 22 August 2025</strong> | <strong>07:30 PM - 11:00 PM IST</strong></p>
+            
+            <h2>📍 Location</h2>
+            <p><strong>PVR IMAX, Mumbai</strong></p>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=PVR+IMAX,+Mumbai" target="_blank">
+                📍 View on Google Maps
+            </a>
+
+            <h2>🃏 About This Event</h2>
+            <p>Get ready to relive <strong>The Dark Knight</strong> with stunning IMAX visuals and immersive sound!</p>
+            <ul>
+                <li>Witness <strong>Heath Ledger's iconic Joker performance</strong></li>
+                <li>Enjoy the <strong>ultimate cinematic experience</strong> in <strong>IMAX</strong></li>
+                <li>Exclusive <strong>The Dark Knight merchandise available</strong></li>
+                <li>Join the <strong>discussion with Batman fans</strong> worldwide</li>
+            </ul>
+            <p>Don't miss the <strong>greatest superhero movie of all time!</strong> 🦇🔥</p>
+        </div>
+        
+        <div class="right-section">
+            <h2>🎟 Tickets</h2>
+            <p>Starting from <strong>₹599</strong></p>
+            <button class="tickets-btn" onclick="showConfirmation()">Get Tickets Now</button>
+
+            <div class="discussion-section">
+                <h2>💬 Discussion</h2>
+                <input type="text" id="discussionName" class="discussion-box" placeholder="Enter your name">
+                <textarea id="discussionText" class="discussion-box" rows="3" placeholder="Share your thoughts..."></textarea>
+                <button class="tickets-btn" onclick="addDiscussion()">Post</button>
+                <div id="discussionList" class="discussion-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Overlay -->
+    <div id="overlay" class="overlay" onclick="hideConfirmation()"></div>
+
+    <!-- Ticket Confirmation Box -->
+    <div id="ticketConfirmation" class="confirmation-box">
+        <h2>✅ Tickets Booked!</h2>
+        <p>Your tickets have been successfully booked. Enjoy the screening! 🎬✨</p>
+        <button class="close-btn" onclick="hideConfirmation()">Close</button>
+    </div>
+</body>
+</html>

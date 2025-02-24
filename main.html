@@ -1,0 +1,277 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Movie Design</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">SKIBIDI</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Host event</li>
+                    <li class="menu-list-item">Join event</li>
+                    <li class="menu-list-item">Location</li>
+                    
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="profile.png" alt="Profile Picture">
+                <div class="profile-text-container" onclick="toggleDropdown()">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">View Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+            
+            <style>
+            .profile-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            
+            .profile-text-container {
+                margin: 0 20px;
+                cursor: pointer;
+            }
+            
+            .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                width: 120px;
+                overflow: hidden;
+                z-index: 10;
+                transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+            }
+            
+            .dropdown-menu a {
+                display: block;
+                padding: 10px;
+                color: black;
+                text-decoration: none;
+                transition: background 0.3s ease, transform 0.3s ease;
+            }
+            
+            .dropdown-menu a:hover {
+                background-color: #f0f0f0;
+                transform: translateX(5px);
+            }
+
+            
+            
+            .dropdown-menu.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            </style>
+            
+            <script>
+            function toggleDropdown() {
+                var dropdown = document.getElementById("dropdownMenu");
+                dropdown.classList.toggle("active");
+            }
+            
+            document.addEventListener("click", function(event) {
+                var profileContainer = document.querySelector(".profile-container");
+                var dropdown = document.getElementById("dropdownMenu");
+                if (!profileContainer.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+            </script>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content-container">
+            <div class="containers">
+                <div class="car">
+                    <div class="carousel-container">
+                        <img src="1d.jpg" alt="Image 1">
+                        <img src="comedy.png" alt="Image 2">
+                        <img src="cod.webp" alt="Image 3">
+                    </div>
+                    <div class="butt">
+                        <button id="prevBtn">&#10094;</button>
+                        <button id="nextBtn">&#10095;</button>
+                    </div>
+                </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">EVENTS</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="movies.jpg" alt="">
+                            <span class="movie-list-item-title">MOVIES</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button" onclick="movie()">See events</button>
+
+                                <script>
+                                function movie() {
+                                    window.location.href = "html.html";
+                                }
+                                </script>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="music.jpg" alt="">
+                            <span class="movie-list-item-title">MUSIC</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button" onclick="music()">See events</button>
+
+                                <script>
+                                function music() {
+                                    window.location.href = "music.html";
+                                }
+                                </script>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="gaming.jpg" alt="">
+                            <span class="movie-list-item-title">GAMING</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button" onclick="game()">See events</button>
+
+                                <script>
+                                function game() {
+                                    window.location.href = "game.html";
+                                }
+                                </script>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="party.jpg" alt="">
+                            <span class="movie-list-item-title">GATHERINGS</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button" onclick="gather()">See events</button>
+
+                                <script>
+                                function gather() {
+                                    window.location.href = "gather.html";
+                                }
+                                </script>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="job fair.jpg" alt="">
+                            <span class="movie-list-item-title">EXPOS</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button" onclick="expo()">See events</button>
+
+                                <script>
+                                function expo() {
+                                    window.location.href = "expo.html";
+                                }
+                                </script>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="workshop.jpg" alt="">
+                            <span class="movie-list-item-title">WORKSHOP</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button" onclick="workshop()">See events</button>
+
+                                <script>
+                                function workshop() {
+                                    window.location.href = "workshop.html";
+                                }
+                                </script>
+                        </div>
+                        
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TRENDING THIS WEEK</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="interstellar.png" alt="">
+                            <span class="movie-list-item-title">#1</span>
+                            <p class="movie-list-item-desc">INTERSTELLAR</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="batman.jpg" alt="">
+                            <span class="movie-list-item-title">#2</span>
+                            <p class="movie-list-item-desc">THE DARK KNIGHT</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="health.jpg" alt="">
+                            <span class="movie-list-item-title">#3</span>
+                            <p class="movie-list-item-desc">NUTS FOR GUTS</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="sid.jpg" alt="">
+                            <span class="movie-list-item-title">#4</span>
+                            <p class="movie-list-item-desc">SID: heart's honey</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="robot.jpg" alt="">
+                            <span class="movie-list-item-title">#5</span>
+                            <p class="movie-list-item-desc">AI meets HUMAN</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="club.jpg" alt="">
+                            <span class="movie-list-item-title">#6</span>
+                            <p class="movie-list-item-desc">NIGHTS OF MADRAS</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="job.png" alt="">
+                            <span class="movie-list-item-title">#7</span>
+                            <p class="movie-list-item-desc">ROB the JOB</p>
+                            <button class="movie-list-item-button">BOOK</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+        </div>
+    </div>
+    <script src="book.js"></script>
+</body>
+
+</html> 

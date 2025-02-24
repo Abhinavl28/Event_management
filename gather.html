@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+     <!-- Fontawesome CDN Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+         
+     <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">HOME</a>
+            <a href="">MY BOOKINGS</a>
+            <a href="">PROFILE</a>
+        </nav>
+    </header>
+    
+
+    
+    <!-- carousel -->
+    <div class="carousal">
+        <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="nightlifeLAND.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">1</div>
+                        <div class="topic1">NIGHT PARTY</div>
+                        <div class="des">
+                            The bass thumps through the air as neon lights pulse in sync with the music, electrifying the crowd. Laughter and cheers blend with the DJ’s beats, creating an atmosphere of pure euphoria. It’s a night of endless energy, where every moment feels alive.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="gat1()">BOOK</button>
+
+                                <script>
+                                function gat1() {
+                                    window.location.href = "gat_1.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="GROUPLAND.webp">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">2</div>
+                        <div class="topic2">GROUP YOGA</div>
+                        <div class="des">
+                            The morning sun casts a golden glow as a serene silence fills the space. Synchronized breaths and flowing movements create a rhythm of peace and unity. In this moment, the world fades, leaving only balance, energy, and connection.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="gat2()">BOOK</button>
+
+                                <script>
+                                function gat2() {
+                                    window.location.href = "gat_2.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="MNGLAND.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">3</div>
+                        <div class="topic3">MEET & GREET</div>
+                        <div class="des">
+                            Excitement fills the air as fans gather, hearts racing with anticipation. Laughter, selfies, and warm handshakes create unforgettable memories. In this brief moment, connections are made, and dreams come to life.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="gat3()">BOOK</button>
+
+                                <script>
+                                function gat3() {
+                                    window.location.href = "gat_3.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="GYM.jpg">
+                    <div class="content">
+                        <div class="author">EVENT</div>
+                        <div class="title">4</div>
+                        <div class="topic4">GYM SESSIONS</div>
+                        <div class="des">
+                            The sound of weights clanking and music pumping fuels your energy. Sweat drips as you push past limits, surrounded by like-minded warriors. Every rep, every set—one step closer to your strongest self.
+                        </div>
+                        <div class="buttons">
+                            <button class="carousel-list-item-buttons" onclick="gat4()">BOOK</button>
+
+                                <script>
+                                function gat4() {
+                                    window.location.href = "gat_4.html";
+                                }
+                                </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- list thumnail -->
+            <div class="thumbnail">
+                <div class="item">
+                    <img src="NIGHTLIFE.jpg">
+                    <div class="content">
+                        <div class="title">
+                            OK
+                        </div>
+                        <div class="description">
+                            opm
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="GROUPYOGA.jpg">
+                    <div class="content">
+                        <div class="title">
+                            RYOIKI TENKAI
+                        </div>
+                        <div class="description">
+                            I like slaves
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="MNG.jpg">
+                    <div class="content">
+                        <div class="title">
+                            SKIBIDI
+                        </div>
+                        <div class="description">
+                            Gawk Gawk
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="GYMVERT.jpg">
+                    <div class="content">
+                        <div class="title">
+                            AMATERASU
+                        </div>
+                        <div class="description">
+                            Your weakness is my existence
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- next prev -->
+    
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- time running -->
+            <div class="time"></div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="info.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Yoga 2025</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .left-section {
+            flex: 2;
+        }
+        .right-section {
+            flex: 1;
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #2e7d32;
+        }
+        .event-info {
+            font-size: 16px;
+            color: #555;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 15px;
+            background: #c8e6c9;
+            border-radius: 5px;
+        }
+        .tickets-btn {
+            display: block;
+            width: 100%;
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tickets-btn:hover {
+            background: #1b5e20;
+        }
+        .discussion {
+            margin-top: 20px;
+        }
+        .discussion-item {
+            background: #a5d6a7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow-y: auto;
+            max-height: 200px;
+        }
+        .confirmation-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: none;
+            width: 300px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .confirmation-box h2 {
+            margin: 0 0 15px;
+            color: #ff4500;
+        }
+        .close-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .close-btn:hover {
+            background: #555;
+        }
+        /* Background Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .map-link {
+            color: #1b5e20;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+         function showConfirmation() {
+            document.getElementById("ticketConfirmation").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function hideConfirmation() {
+            document.getElementById("ticketConfirmation").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function addDiscussion() {
+            var name = document.getElementById("discussionName").value.trim();
+            var comment = document.getElementById("discussionText").value.trim();
+            if (name === "" || comment === "") {
+                alert("Please enter both name and comment!");
+                return;
+            }
+            var discussionList = document.getElementById("discussionList");
+            var newComment = document.createElement("div");
+            newComment.classList.add("discussion-item");
+            newComment.innerHTML = `<p class="discussion-name">${name}:</p><p>${comment}</p>`;
+            discussionList.insertBefore(newComment, discussionList.firstChild);
+            document.getElementById("discussionText").value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>🧘 Group Yoga 2025 🧘</h1>
+            <p class="event-info">Experience mindfulness and wellness with Tamil Nadu’s largest group yoga session.</p>
+            
+            <div class="details">
+                <h2>📅 Date & Time</h2>
+                <p><strong>Sunday, 12 October 2025</strong> | <strong>06:00 AM - 09:00 AM IST</strong></p>
+                <h2>📍 Location</h2>
+                <p><strong>Marina Beach, Chennai, Tamil Nadu</strong></p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Marina+Beach,+Chennai,+Tamil+Nadu" class="map-link" target="_blank">View on Map</a>
+            </div>
+
+            <h2>🌟 About This Event</h2>
+            <p>Join us for a peaceful morning of guided yoga sessions, meditation, and breathing exercises, led by top yoga instructors. Connect with a like-minded community and embark on a journey of self-discovery.</p>
+        </div>
+        
+        <div class="right-section">
+            <h2>🎟 Registration</h2>
+            <p>Starting from <strong>₹199</strong></p>
+            <button class="tickets-btn" onclick="showConfirmation()">Get Tickets Now</button>
+            <div class="discussion">
+                <h2>💬 Discussion</h2>
+                <div id="comments" class="discussion-item"></div>
+                <input type="text" id="username" placeholder="Your Name" style="width: 100%; margin-top: 10px; padding: 5px;">
+                <textarea id="comment" placeholder="Write a comment..." style="width: 100%; margin-top: 10px; padding: 5px;"></textarea>
+                <button onclick="postComment()" style="margin-top: 10px; padding: 10px; background: #2e7d32; color: white; border: none; cursor: pointer; width: 100%; border-radius: 5px;">Post</button>
+            </div>
+        </div>
+    </div>
+    <!-- Background Overlay -->
+    <div id="overlay" class="overlay" onclick="hideConfirmation()"></div>
+
+    <!-- Ticket Confirmation Box -->
+    <div id="ticketConfirmation" class="confirmation-box">
+        <h2>✅ Tickets Booked!</h2>
+        <p>Your tickets have been successfully booked. Enjoy the screening! 🎬✨</p>
+        <button class="close-btn" onclick="hideConfirmation()">Close</button>
+    </div>
+</body>
+</html>

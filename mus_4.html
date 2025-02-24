@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay Antony Concert 2025</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .left-section {
+            flex: 2;
+        }
+        .right-section {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        .event-info {
+            font-size: 16px;
+            color: #666;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+        .tickets-btn {
+            display: block;
+            width: 100%;
+            background: #ff4500;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .tickets-btn:hover {
+            background: #e63e00;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .map-link:hover {
+            text-decoration: underline;
+        }
+        /* Comment Section Styles */
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .comment-list {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .comment-item {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+        .comment-name {
+            font-weight: bold;
+            color: #ff4500;
+        }
+        /* Ticket Confirmation Pop-up */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+        .popup h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #ff4500;
+        }
+        .popup p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .popup button {
+            background: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .popup button:hover {
+            background: #e63e00;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+    </style>
+    <script>
+        function addComment() {
+            var name = document.getElementById("commentName").value.trim();
+            var comment = document.getElementById("commentText").value.trim();
+            if (name === "" || comment === "") {
+                alert("Please enter both name and comment!");
+                return;
+            }
+            var commentList = document.getElementById("commentList");
+            var newComment = document.createElement("div");
+            newComment.classList.add("comment-item");
+            newComment.innerHTML = `<p class="comment-name">${name}:</p><p>${comment}</p>`;
+            commentList.insertBefore(newComment, commentList.firstChild);
+            document.getElementById("commentText").value = "";
+        }
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>🎤 Vijay Antony Concert 2025 🎤</h1>
+            <p class="event-info">Experience an unforgettable night of music and melodies with Vijay Antony live in concert!</p>
+
+            <div class="details">
+                <h2>📅 Date & Time</h2>
+                <p><strong>Sunday, 20 July 2025</strong> | <strong>07:30 PM - 11:30 PM IST</strong></p>
+                
+                <h2>📍 Location</h2>
+                <p><strong>Jawaharlal Nehru Indoor Stadium, Chennai</strong></p>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Jawaharlal+Nehru+Indoor+Stadium,+Chennai" target="_blank">
+                    📍 View on Google Maps
+                </a>
+            </div>
+
+            <h2>🌟 About This Event</h2>
+            <p>Join us for an evening of soul-stirring music as <strong>Vijay Antony</strong> performs his greatest hits live!</p>
+            <ul>
+                <li>Enjoy <strong>iconic Tamil film songs</strong> performed live</li>
+                <li>Mesmerizing <strong>stage effects & sound system</strong></li>
+                <li>Connect with thousands of <strong>Vijay Antony fans</strong></li>
+                <li>Exclusive <strong>Vijay Antony merchandise</strong></li>
+            </ul>
+            <p>Don’t miss out on the <strong>biggest Tamil music event of the year!</strong> 🎶🔥</p>
+        </div>
+        
+        <div class="right-section">
+            <h2>🎟 Tickets</h2>
+            <p>Starting from <strong>₹899</strong></p>
+            <button class="tickets-btn" onclick="showPopup()">Get Tickets Now</button>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h2>💬 Discussion</h2>
+                <input type="text" id="commentName" class="comment-box" placeholder="Enter your name">
+                <textarea id="commentText" class="comment-box" rows="3" placeholder="Write a comment..."></textarea>
+                <button class="tickets-btn" onclick="addComment()">Post Comment</button>
+                <div id="commentList" class="comment-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ticket Confirmation Pop-up -->
+    <div id="overlay" class="overlay" onclick="closePopup()"></div>
+    <div id="popup" class="popup">
+        <h2>🎟 Ticket Confirmed!</h2>
+        <p>Your tickets have been successfully booked.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</body>
+</html>

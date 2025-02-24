@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Register Form</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form onsubmit="registerUser(event)">
+      <h2>Register</h2>
+      <div class="input-field">
+        <input type="text" required id="reg-email">
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required id="reg-password">
+        <label>Enter your password</label>
+      </div>
+      <button type="submit">Register</button>
+      <div class="register">
+        <p>Already have an account? <a href="#" onclick="redToPage()">Login</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
